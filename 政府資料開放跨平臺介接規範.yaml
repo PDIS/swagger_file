@@ -1,0 +1,230 @@
+swagger: '2.0'
+
+info:
+  version: "1.0"
+  title: 政府資料開放跨平臺介接規範
+  description: 應用範圍，名詞定義，作業流程等請參照此[pdf檔案](http://file.data.gov.tw/opendatafile/%E6%94%BF%E5%BA%9C%E8%B3%87%E6%96%99%E9%96%8B%E6%94%BE%E8%B7%A8%E5%B9%B3%E8%87%BA%E4%BB%8B%E6%8E%A5%E8%A6%8F%E7%AF%84.pdf)。
+  
+# host: data.gov.tw
+basePath: /api/v1
+produces: 
+- application/json
+- application/x-gzip
+
+paths:
+  /rest/dataset:
+    get:
+      operationId: listDatasetId
+      produces: 
+      - application/json
+      description: |
+        取得資料集編號清單。
+        
+        * 輸出內容之資料集編號(identifier)係為資料集之資訊辨識編碼。
+        
+        * 輸出內容之資料集編號等於資料集詮釋資料之資料集編號。
+      parameters:
+      - name: modified
+        in: query
+        description: |
+          日期, 詮釋資料最後更新時間大於或等於輸入之查詢條件。若無輸入，則傳回所有資料集編號清單。
+          日期格式為 RFC3339 date-time。
+        required: false
+        type: string
+        format: date-time
+      - $ref: '#/parameters/limitParam'
+      - $ref: '#/parameters/offsetParam'
+      responses:
+        200:
+          description: 
+            資料開放平臺所有資料集之資料集編號。若查無資料則回傳空陣列。
+          schema:
+            properties:
+              success:
+                type: boolean
+                description: 表示回傳是否成功。
+              result:
+                type: array
+                items:
+                  type: string
+          examples:
+            application/json: {"success":true, "result":["A41000000G-000004","301000000A-123456","355000000I-000003","355000000-000004","301000000A-000005"]}
+    post:
+      operationId: appendDataset
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      description: |
+        新增詮釋資料。
+      parameters:
+      - name: data
+        in: body
+        required: true
+        description: |
+          資料集詮釋資料 JSON 格式的欄位與內容。
+        schema:
+          type: string
+          example: |
+            {
+              "categoryCode":"I00",
+              "identifier":"A41000000G-000001",
+              "title":"行政院公報",
+              …
+            }
+      responses:
+        200:
+          description: 
+            新增資料集詮釋資料之結果。
+          schema:
+            properties:
+              success:
+                type: boolean
+                description: 表示回傳是否成功。
+              result:
+                properties:
+                  identifier:
+                    type: string
+                    description: 資源ID。
+                  error_type:
+                    type: string
+                    description: 錯誤代碼。
+                  message:
+                    type: string
+                    description: 錯誤訊息。
+          examples:
+            application/json: {"success": false,"error": { "identifier":"A41000000G-000001", "error_type":"ER0031:資料集分類錯誤", "message":"無此分類 categoryCode=k00"}}
+
+
+  /rest/dataset/{identifier}:
+    get:
+      operationId: getDatasetById
+      produces: 
+      - application/json
+      description: |
+        取得資料集詮釋資料。
+        
+        * 資料集編號(identifier)係為資料集之資訊辨識編碼。等於資料集詮釋資料的資料集編號。
+        
+        * 資源路徑之資料集編號可由「取得資料集標號清單」、「取得群組相關的資料集編號」、「取得標籤相關的資料集編號」等 API 項目取得。
+        
+        * 若不輸入{identifier}參數，則請詳見「取得資料集編號清單」說明。
+        
+      parameters:
+      - $ref: '#/parameters/identifierParam'
+      responses:
+        200:
+          description: |
+            * 資料開放平臺提供之資料集詮釋資料欄位及內容。詮釋資料欄位為「資料集詮釋資料標準規範」制定之詮釋資料欄位或機關自行定義之詮釋資料欄位。
+            
+            * 當執行跨平臺詮釋資料交換時，輸出內容必須包含機關 OID(publisherOID)與機關代號(publisherOrgCode)，以利各資料開放平臺識別資料集來源。機關 OID 與機關代號欄位內容，請參見政府物件識別碼網站(http://oid.nat.gov.tw/OIDWeb/chmain.html)。
+          schema:
+            properties:
+              success:
+                type: boolean
+                description: 表示回傳是否成功。
+              result:
+                type: object
+          examples:
+            application/json:
+              {"success": true, "result":{ "categoryCode":"I00", "identifier":"A41000000G-000001", "title":"行政院公報", "description":"行政院及所屬機關涉及人民權益之法 令等重要事項，主要內容有法規、行 政規則、公告及送達、處分、特載 （總統文告及院長談話）、轉載（經 總統公布之條約、法律、緊急命 令）、專載（院會院長提示、決定、 決議事項）及其他等 8 大類。", "fieldDescription":"公報類型、編輯分類(篇名)、公 告機關、承辦機關、發文日期、發文 字號、標題、英文標題、主旨、依 據、關鍵字、英文關鍵字、公告事 項、表示意見截止日、內容主題、施 政分類、服務分類、附件個數、內容 網頁連結、英文網址連結。", "type":"rawData", "license":"政府資料開放平臺資料使用規範", "licenseURL":"http://data.gov.tw/principle", "cost":"免費", "costURL":"", "costLaw":"", "organization":"國家發展委員會", "organizationContactName":"郭大明 先生", "organizationContactPhone":"02-23165300#XX", "organizationContactEmail":"example1@ndc.gov.tw ", "publisher":"國家發展委員會", "publisherContactName":"鄭大明 先生", "publisherContactPhone":"02-23165300#OO ", "publisherContactEmail":"example2@ndc.gov.tw", "publisherOID":"2.16.886.101.20003.20069", "publisherOrgCode":"A41000000G", "accrualPeriodicity":"每日", "temporalCoverageFrom":"2014-01-01", "temporalCoverageTo":"2015-01-01", "issued":"2015-01-01 23:59:59", "modified":"2015-01-01 23:59:59", "spatial":"臺灣", "language":"zh", "landingPage":"http://gazette.nat.gov.tw/egFront/Open Data/list.jsp", "keyword":[ "公報", "施政", "服務", "行政院" ], "numberOfData":4600, "notes":"正式出版後時有異動，請以正式出版之書 目資料為準。API 參數：year 代表年度", "distribution": [ { "resourceID":"A41000000G-000001-001", "resourceDescription":"行政院公報-民國 103 年-交通建設篇- XML", "format":"XML", "resourceModified":"2015-01-01 23:59:59", "downloadURL":"http://gazette.nat.gov.tw/eg Front/OpenData/download.jsp", "metadataSourceOfData":"http://example1", "characterSetCode":"UTF-8" }, { "resourceID":"A41000000G-000001-002", "resourceDescription":"行政院公報-民國 103 年-衛生勞動篇- ZIP", "format":"ZIP", "resourceModified":"2015-01-01 23:59:59", "downloadURL":"http://oid.nat.gov.tw/OID Web/GDS.zip", "metadataSourceOfData":"http://example2", "characterSetCode":"BIG-5" } , { "resourceID":"A41000000G-000001-003", "resourceDescription":"行政院公報-民國 103 年-教育文化篇- services", "format":"services", "resourceModified":"2015-01-01 23:59:59", "accessURL":"http://example/endpoint", "metadataSourceOfData":"http://example3", "characterSetCode":"UTF-8" } ] } }
+    put:
+      operationId: replaceDataset
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      description: |
+        修改資料集詮釋資料。
+      parameters:
+      - $ref: '#/parameters/identifierParam'
+      - name: data
+        in: body
+        required: true
+        description: |
+          資料集詮釋資料 JSON 格式之欄位與內容。
+        schema:
+          type: string
+          example: |
+            {
+              "categoryCode":"I00",
+              "identifier":"A41000000G-000001",
+              "title":"行政院公報",
+              …
+            }
+      responses:
+        200:
+          description: 
+            修改資料集詮釋資料結果。
+          schema:
+            properties:
+              success:
+                type: boolean
+                description: 表示回傳是否成功。
+              result:
+                properties:
+                  identifier:
+                    type: string
+                    description: 資源ID。
+                  error_type:
+                    type: string
+                    description: 錯誤代碼。
+                  message:
+                    type: string
+                    description: 錯誤訊息。
+          examples:
+            application/json: {"success": false,"error": { "identifier": " A41000000G-000001", "error_type":"ER0050:欲修改的資料集不存在。", "message": "欲修改的資料集不存在。"}}
+    delete:
+      operationId: deleteDataset
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      description: |
+        刪除詮釋資料。
+      parameters:
+      - $ref: '#/parameters/identifierParam'
+      responses:
+        200:
+          description: 
+            資料開放平臺之資料集詮釋資料欄位和內容。
+          schema:
+            properties:
+              success:
+                type: boolean
+                description: 表示回傳是否成功。
+              result:
+                properties:
+                  identifier:
+                    type: string
+                    description: 資源ID。
+                  error_type:
+                    type: string
+                    description: 錯誤代碼。
+                  message:
+                    type: string
+                    description: 錯誤訊息。
+          examples:
+            application/json: {"success": true,"result": { "identifier": "A41000000G-000001"}}
+          
+                    
+parameters:
+  limitParam:
+    name: limit
+    in: query
+    description: 限制最多回傳的資料筆數。
+    required: false
+    type: integer
+  offsetParam:
+    name: offset
+    in: query
+    description: 指定從第幾筆後開始回傳。可與 limit 配合使用達到分頁目的。
+    required: false
+    type: integer
+  identifierParam:
+    name: identifier
+    in: path
+    description: 資料集編號即為資料集之資訊辨識編碼，等於資料集詮釋資料之資料集編號。
+      如：A41000000G-000001
+    required: true
+    type: string
