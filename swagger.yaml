@@ -18,6 +18,10 @@ paths:
       - 資料集詮釋資料 API
       description: |
         取得分類群組清單。
+
+        * 分類編號(categoryCode)為政府入口網之服務分類編號 3 碼 18 類。
+            
+        * 輸出範例之分類編號等於資料集詮釋資料之分類編號。
       parameters:
       - $ref: '#/parameters/limitParam'
       - $ref: '#/parameters/offsetParam'
@@ -25,11 +29,6 @@ paths:
         200:
           description: |
             回傳資料開放平臺上所有資料集之分類編號(categoryCode)。
-          
-            * 分類編號(categoryCode)為政府入口網之服務分類編號 3 碼 18 類。
-            
-            * 輸出範例之分類編號等於資料集詮釋資料之分類編號。
-            
           schema:
             properties:
               success:
