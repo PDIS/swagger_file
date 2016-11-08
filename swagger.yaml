@@ -264,6 +264,39 @@ paths:
         in: path
         type: string
         description: 資料資源編號。
+      - name: filters
+        required: false
+        in: query
+        type: string
+        description: |
+          輸入資料資源之過濾條件，參數為資料英文欄位所含之內容。
+          
+          正確範例：filters={"EngFiled1":"ValueaA","EngFiled2":"ValueB"}
+          
+          錯誤範例：filters=EngFiled1:ValueaA 或filters="EngFiled1":"ValueA"
+      - name: q
+        required: false
+        in: query
+        type: string
+        description: | 
+          資料資源所有內容之全文檢索字串。視業務需要可選擇性提供。
+          
+          正確範例：q=臺北市
+          
+          錯誤範例：q=市（關鍵字太短）
+      - name: sort
+        required: true
+        in: query
+        type: string
+        description: |
+          排序資料資源之欄位名稱。只能指定一個。
+      - $ref: '#/parameters/limitParam'
+      - $ref: '#/parameters/offsetParam'
+      - name: fields
+        required: true
+        in: query
+        type: string
+        description: 資料資源之欄位名稱，將回傳指定欄位的內容。指定複數欄位時以逗號(,)隔開。
       responses:
         200:
           description: |
