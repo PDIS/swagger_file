@@ -270,9 +270,7 @@ paths:
         type: string
         description: |
           輸入資料資源之過濾條件，參數為資料英文欄位所含之內容。
-          
           正確範例：filters={"EngFiled1":"ValueaA","EngFiled2":"ValueB"}
-          
           錯誤範例：filters=EngFiled1:ValueaA 或filters="EngFiled1":"ValueA"
       - name: q
         required: false
@@ -285,7 +283,7 @@ paths:
           
           錯誤範例：q=市（關鍵字太短）
       - name: sort
-        required: true
+        required: false
         in: query
         type: string
         description: |
