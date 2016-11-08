@@ -14,6 +14,8 @@ paths:
   /rest/group:
     get:
       operationId: listGroup
+      produces: 
+      - application/json
       tags:
       - 資料集詮釋資料 API
       description: |
@@ -46,6 +48,8 @@ paths:
   /rest/group/{categoryCode}:
     get:
       operationId: getDatasetIdInGroup
+      produces: 
+      - application/json
       tags:
       - 資料集詮釋資料 API
       description: | 
@@ -103,6 +107,8 @@ paths:
   /rest/tag:
     get:
       operationId: listTag
+      produces: 
+      - application/json
       tags:
       - 資料集詮釋資料 API
       description: 
@@ -129,6 +135,8 @@ paths:
   /rest/tag/{tagName}:
     get:
       operationId: getDatasetIdOfTag
+      produces: 
+      - application/json
       tags:
       - 資料集詮釋資料 API
       description: 
@@ -165,6 +173,8 @@ paths:
   /rest/dataset:
     get:
       operationId: listDatasetId
+      produces: 
+      - application/json
       tags:
       - 資料集詮釋資料 API
       description: |
@@ -203,6 +213,8 @@ paths:
   /rest/dataset/{identifier}:
     get:
       operationId: getDatasetById
+      produces: 
+      - application/json
       tags:
       - 資料集詮釋資料 API
       description: |
@@ -240,6 +252,8 @@ paths:
   /rest/datastore/{resourceID}:
     get:
       operationId: getDataBySetId
+      produces: 
+      - application/json
       tags:
       - 資料資源內容API
       description:
@@ -268,6 +282,8 @@ paths:
   /dump/datastore/{resourceID}:
     get:
       operationId: dumpDataBySetId
+      produces: 
+      - application/x-gzip
       tags:
       - 資料資源內容API
       description:
