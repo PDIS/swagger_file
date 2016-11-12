@@ -125,6 +125,7 @@ paths:
           description: |
             資料開放平臺上所有資料集之標籤清單。標籤(tag)為各機關紀錄於資料集詮釋資料中之標籤/關鍵字(keyword)。若查無資料則回傳空陣列。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
@@ -162,6 +163,7 @@ paths:
           description: 
             資料開放平臺上所有具該標籤的資料集之資料集編號。若查無資料則回傳空陣列。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
@@ -203,6 +205,7 @@ paths:
           description: 
             資料開放平臺所有資料集之資料集編號。若查無資料則回傳空陣列。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
@@ -243,6 +246,7 @@ paths:
             
             * 當執行跨平臺詮釋資料交換時，輸出內容必須包含機關 OID(publisherOID)與機關代號(publisherOrgCode)，以利各資料開放平臺識別資料集來源。機關 OID 與機關代號欄位內容，請參見政府物件識別碼網站(http://oid.nat.gov.tw/OIDWeb/chmain.html)。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
@@ -307,6 +311,7 @@ paths:
             輸出資訊包含資料集欄位內容，將先呈現欄位格式，再回傳資料內容。
             成功時回傳不含 error 欄位，失敗時回傳不含 result 欄位。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
