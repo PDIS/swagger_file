@@ -39,6 +39,7 @@ paths:
           description: 
             資料開放平臺所有資料集之資料集編號。若查無資料則回傳空陣列。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
@@ -77,6 +78,7 @@ paths:
           description: 
             新增資料集詮釋資料之結果。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
@@ -119,6 +121,7 @@ paths:
             
             * 當執行跨平臺詮釋資料交換時，輸出內容必須包含機關 OID(publisherOID)與機關代號(publisherOrgCode)，以利各資料開放平臺識別資料集來源。機關 OID 與機關代號欄位內容，請參見政府物件識別碼網站(http://oid.nat.gov.tw/OIDWeb/chmain.html)。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
@@ -157,6 +160,7 @@ paths:
           description: 
             修改資料集詮釋資料結果。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
