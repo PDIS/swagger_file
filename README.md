@@ -1,4 +1,4 @@
-# 政府資料開放平台標準規範 OpenAPI 描述檔
+# 政府資料開放平台標準規範（OpenAPI 描述）
 
 [政府資料開放跨平臺介接規範](http://rebilly.github.io/ReDoc/?url=https%3A%2F%2Fraw.githubusercontent.com%2FPDIS%2Fswagger_file%2Fmaster%2F%E6%94%BF%E5%BA%9C%E8%B3%87%E6%96%99%E9%96%8B%E6%94%BE%E8%B7%A8%E5%B9%B3%E8%87%BA%E4%BB%8B%E6%8E%A5%E8%A6%8F%E7%AF%84.yaml)
 
