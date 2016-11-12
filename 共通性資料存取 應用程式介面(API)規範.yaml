@@ -33,6 +33,7 @@ paths:
           description: |
             回傳資料開放平臺上所有資料集之分類編號(categoryCode)。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
@@ -75,11 +76,13 @@ paths:
           description: 
             回傳群組相關之資料集編號。
           schema:
+            type: object
             properties:
               success:
                 type: boolean
                 description: 表示回傳是否成功。
               result:
+                type: object
                 properties:
                   categoryCode: 
                     type: string
