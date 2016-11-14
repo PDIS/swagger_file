@@ -1,0 +1,190 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Document for retrieving laws",
+    "version": "0.0.1",
+    "description": "The document of using laws API."
+  },
+  "basePath": "/api/v1",
+  "paths": {
+    "/laws": {
+      "get": {
+        "tags": [
+          "法規 API"
+        ],
+        "summary": "取得法規列表",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "取得法規列表",
+            "schema": {
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "description": "表示回傳是否成功。"
+                },
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "examples": {
+              "application/json": {
+                "success": true,
+                "result": [
+                  {
+                    "lawId": "A0010032",
+                    "name": "行政院組織法",
+                    "lastModify": "2010-02-03T00:00:00+08:00",
+                    "versions": [
+                      "0360331",
+                      "0360422",
+                      "0361225",
+                      "0370513",
+                      "0380321",
+                      "0411120",
+                      "0690629",
+                      "0990203"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/laws/{lawId}": {
+      "get": {
+        "tags": [
+          "法規 API"
+        ],
+        "summary": "取得單一法規的所有修法版本列表",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "lawId",
+            "in": "path",
+            "description": "法規ID，如：A0010032",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "取得法規版本列表",
+            "schema": {
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "description": "表示回傳是否成功。"
+                },
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "examples": {
+              "application/json": {
+                "success": true,
+                "result": [
+                  "0360331",
+                  "0360422",
+                  "0361225",
+                  "0370513",
+                  "0380321",
+                  "0411120",
+                  "0690629",
+                  "0990203"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/laws/{lawId}/{version}": {
+      "get": {
+        "tags": [
+          "法規 API"
+        ],
+        "summary": "取得單一法規的指定版本",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "lawId",
+            "in": "path",
+            "description": "法規ID，如：A0010032",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "0990203",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "取得法規內容",
+            "schema": {
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "description": "表示回傳是否成功。"
+                },
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "examples": {
+              "application/json": {
+                "success": true,
+                "result": {
+                  "lawId": "A0010032",
+                  "version": "0990203",
+                  "name": "行政院組織法",
+                  "enName": "Organizational Act of the Executive Yuan",
+                  "type": "法律",
+                  "lastModify": "2010-02-03T00:00:00+08:00",
+                  "historicalRecord": "1.中華民國三十六年三月三十一日國民政府制定公布全文 16 條\n2.中華民國三十六年四月二十二日國民政府修正公布全文 16 條\n3.中華民國三十六年十二月二十五日國民政府修正公布全文 17 條；並自 三十七年五月二十五日施行\n4.中華民國三十七年五月十三日國民政府修正公布第 3、5、15 條條文\n5.中華民國三十八年三月二十一日總統令修正公布第 3、5 條條文\n6.中華民國四十一年十一月二十日總統令修正公布第 5 條條文\n7.中華民國六十九年六月二十九日總統（69）台統（一）義字第 3666 號 令修正發布第 3 條條文\n8.中華民國九十九年二月三日總統華總一義字第 09900024171 號令修正 公布全文 15 條；並自一百零一年一月一日開始施行",
+                  "url": "http://law.moj.gov.tw/LawClass/LawContent.aspx?PCODE=A0010032",
+                  "abolishedComment": "",
+                  "attachments": [],
+                  "content": [
+                    {
+                      "title": "第 1 條",
+                      "content": "本法依憲法第六十一條制定之。"
+                    },
+                    {
+                      "title": "第 2 條",
+                      "content": "行政院行使憲法所賦予之職權。"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
