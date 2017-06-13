@@ -1,0 +1,295 @@
+{
+    "name": "災害情資網 即時災情觀測嵌入API",
+    "description": "國家災害防救科技中心所提供之災害情資網當中，各項功能可以iframe API嵌入至不同網頁",
+    "url": "http://eocdss.ncdr.nat.gov.tw/web/apis.json",
+    "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+    "specificationVersion": "0.14",
+    "apis": [{
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=218&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=aHDm9HLjYTWJ",
+            "name": "本日情勢-天氣概況",
+            "description": "本日情勢-天氣概況，閃電資訊與雷達回波",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=218&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=aHDm9HLjYTWJ",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=219&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=Sfs6ykj2tQVy",
+            "name": "本日情勢-降雨觀測",
+            "description": "本日情勢-降雨觀測，即時雨量監測、累積雨量圖",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=219&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=Sfs6ykj2tQVy",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=221&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=YuDz2cxPv9XJ",
+            "name": "本日情勢-示警燈號",
+            "description": "本日情勢-示警燈號，縣市警戒指標",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=221&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=YuDz2cxPv9XJ",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=1841&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=xHTvKvRxeJN5",
+            "name": "本日情勢-空氣品質監測",
+            "description": "本日情勢-空氣品質監測",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=1841&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=xHTvKvRxeJN5",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=329&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=g1BiyeKPWcSK",
+            "name": "本日情勢-強回波示警",
+            "description": "本日情勢-強回波示警，雷達回波、即時雨量監測",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=329&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=g1BiyeKPWcSK",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=341&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=GxhPKOWhDM0S",
+            "name": "本日情勢-道路封閉",
+            "description": "本日情勢-道路封閉，預警性封閉、公路橋樑災點、道路中斷統計",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=341&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=GxhPKOWhDM0S",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=222&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=xVzfwpV8cKof",
+            "name": "本日情勢-供水情勢",
+            "description": "本日情勢-供水情勢或限水資訊",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=222&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=xVzfwpV8cKof",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3164&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=7kXfssRZxQGM",
+            "name": "民生資訊-供水即時資訊",
+            "description": "民生資訊-供水即時資訊、停水資訊",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3164&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=7kXfssRZxQGM",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3165&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=aJeOr2oBwUJf",
+            "name": "民生資訊-維生管線_電力",
+            "description": "民生資訊-維生管線_電力，停電區域資訊",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3165&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=aJeOr2oBwUJf",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3166&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=LYQf8C3jSoYw",
+            "name": "民生資訊-停話資訊",
+            "description": "民生資訊-停話資訊，市話與行動電話停話區域",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3166&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=LYQf8C3jSoYw",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3407&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=78nlcuNkeQXr",
+            "name": "民生資訊-道路資訊",
+            "description": "民生資訊-道路資訊，預警性封閉、公路橋樑災點、道路中斷統計",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3407&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=78nlcuNkeQXr",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3321&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=nuMmVfw4GgeL",
+            "name": "民生資訊-綜合資訊",
+            "description": "民生資訊-綜合資訊，停電、停水、停話、停電與道路災情總和",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=3321&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=nuMmVfw4GgeL",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2942&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=bvpflyeE8k3C",
+            "name": "豪大雨情資-即時淹水警戒",
+            "description": "豪大雨情資-即時淹水警戒區域",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2942&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=bvpflyeE8k3C",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2944&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=XVmdFb3x7l5c",
+            "name": "豪大雨情資-土石流警戒",
+            "description": "豪大雨情資-土石流警戒，土石流警戒區域",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2944&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=XVmdFb3x7l5c",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2945&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=Cm660JaVvU7Y",
+            "name": "豪大雨情資-水庫洩洪",
+            "description": "豪大雨情資-水庫洩洪，水庫水位即時訊息、洩洪警示",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2945&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=Cm660JaVvU7Y",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2803&Cx=131.211600&Cy=23.017430&Scale=1&Info=Y&MapControl=Y&AddrLoc=Y&Token=V5nVM3TITsBl",
+            "name": "颱風情資-颱風路徑",
+            "description": "颱風情資-各國颱風路徑預測",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2803&Cx=131.211600&Cy=23.017430&Scale=1&Info=Y&MapControl=Y&AddrLoc=Y&Token=V5nVM3TITsBl",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        },
+        {
+            "humanURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2920&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=wmH0qfVYeDrK",
+            "name": "地震情資-最新PGA分布",
+            "description": "地震情資-最新PGA分布、震度區域",
+            "properties": [],
+            "baseURL": "http://itwapi.ncdr.nat.gov.tw/web/apiIndex.aspx?PageId=2920&Cx=121&Cy=23.5&Scale=3&Info=Y&MapControl=Y&AddrLoc=Y&Token=wmH0qfVYeDrK",
+            "image": "http://eocdss.ncdr.nat.gov.tw/web/images/Portal/BannerLogo.png",
+            "contact": [{
+                "FN": "災害情資網",
+                "email": "office@ncdr.nat.gov.tw",
+                "organizationName": "國家災害防救科技中心",
+                "adr": "23143 新北市新店區北新路三段200號9樓",
+                "tel": "02-8195-8600",
+                "url": "https://ncdr.nat.gov.tw/"
+            }]
+        }
+    ],
+    "maintainers": [{
+        "FN": "災害情資網",
+        "email": "office@ncdr.nat.gov.tw",
+        "organizationName": "國家災害防救科技中心",
+        "adr": "23143 新北市新店區北新路三段200號9樓",
+        "tel": "02-8195-8600",
+        "url": "https://ncdr.nat.gov.tw/"
+    }],
+    "tags": [
+        "gov.tw",
+        "ncdr"
+    ],
+    "include": [],
+    "created": "2017-06-13",
+    "modified": "2017-06-13"
+}
