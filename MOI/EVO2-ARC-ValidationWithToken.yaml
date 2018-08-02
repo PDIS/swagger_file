@@ -1,0 +1,72 @@
+openapi: 3.0.0
+# Added by API Auto Mocking Plugin
+servers:
+  - description: VerifyArcInfo
+    url: https://virtserver.swaggerhub.com/EVO2/ARC/1.0.0
+info:
+  description: This API is used to verify a person's identity by his/her ARC information
+  version: "1.0.0"
+  title: ARC Validation
+tags:
+  - name: admins
+    description: Secured Admin-only calls
+paths:
+  /arc/verify:
+    post:
+      tags:
+        - admins
+      summary: Validate ARC by information provided
+      operationId: validateArc
+      description: Validate ARC by ARC number, correct name on ARC
+      parameters: 
+        - name: arcNum
+          in: query
+          required: true
+          description: The ARC number of the person
+          schema:
+            type: string
+        - name: arcName
+          in: query
+          required: true
+          description: The ARC name of the person, all letters must be capitalized.
+          schema:
+            type: string
+        - name: accessKey
+          in: query
+          required: true
+          description: The access key which verifies the accessibility of the request user.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The ARC information is available.
+        '400':
+          description: The ARC information is correct, but the identity is expired already.
+        '401':
+          description: The ARC information is incorrect.
+        '402':
+          description: The Access Key provided is not available.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArcInfo'
+        description: Inventory item to add
+components:
+  schemas:
+    ArcInfo:
+      type: object
+      required:
+        - arcNum
+        - arcName
+        - accessKey
+      properties:
+        arcNum:
+          type: string
+          example: AA12345678
+        arcName:
+          type: string
+          example: WANG XIAO MING
+        accessKey:
+          type: string
+          example: 3b98e2dffc6cb06a89dcb0d5c60a0206
